@@ -1,0 +1,73 @@
+ ********************************Rapport sur le Code du Jeu du Serpent**************************************
+
+Réalisé par : BENMEZIANE KHIREDDINE & MOUSSAOUI IMENE
+
+Groupe : DL           Année universitaire : 2023/2024
+
+Supervisé par : DUPONT-BOUILLARD ALEXANDRE
+
+NB : Les fichiers doivent être compilés sous un système Linux (nous avons pas vérifié sur windows),
+     et le fichier executable est nommé 'game'
+
+1. Introduction:
+     Ce rapport documente le code source du jeu du serpent développé en langage C dans le cadre de notre 
+     projet du module programmation.Le jeu du serpent est un classique des jeux vidéo, où le joueur contrôle
+     un serpent qui se déplace à travers une grille en essayant de collecter des fruits tout en évitant de se 
+     heurter aux bords de l'écran ou à lui-même ou à un autre serpent.
+
+
+
+2. Description du Jeu
+   
+   Le jeu du serpent que nous avons développé peremt plusieurs modes de jeu:
+     
+     -Mode solo : Le joueur contrôle un serpent et doit collecter des fruits pour marquer des points. Le 
+     jeu se termine lorsque le serpent entre en collision avec les bords de la grille ou avec son propre corps.
+    
+     -Mode joueur VS joueur : un mode de jeu joueur contre joueur, où deux joueurs humains peuvent s'affronter sur la même grille.
+      Chaque joueur contrôle un serpent de couleur différente et doit collecter des fruits pour marquer des points tout en évitant
+      les collisions avec les bords de la grille et avec le corps de son propre serpent ainsi que celui de l'adversaire.
+      Ce mode de jeu offre une expérience compétitive et interactive où les joueurs peuvent rivaliser directement les uns contre
+      les autres pour obtenir le meilleur score possible. Les joueurs peuvent se déplacer en utilisant les touches directionnelles
+      du clavier et les touches "q,w,s,d"
+     
+     -Mode joueur VS ordinateurs: Le but du jeu est de marquer le plus de points possible en collectant des fruits tout en évitant
+      les collisions avec les bords de la grille et avec le corps de son propre serpent ainsi que celui de'adversaire . Le joueur 
+      humain peut se déplacer en utilisant les touches directionnelles du clavier, tandis que l'ordinateur se déplace selon un 
+      algorithme préprogrammé. 
+    
+    -Mode Ias VS Ias :Dans ce mode, les joueurs peuvent observer et interagir avec les serpents qui se déplacent de manière 
+     autonome à travers la grille.Chaque serpent est équipé d'un algorithme préprogrammé pour le controler dans le but de 
+     collecter des fruits et d'éviter les collisions avec les bords de la grille et avec son propre corps. Les joueurs
+     peuvent observer le comportement des différentes IA et analyser leurs stratégies pour mieux comprendre leur fonctionnement.
+
+
+
+3. Architecture du Code
+
+Le code du jeu est divisé en plusieurs fichiers source :
+
+ "main.c" : Contient la fonction principale main() qui gère le menu du jeu et les différents modes de jeu.
+ "menu.c": Implémente ;es fonction qui affiche le menu (menu/menu_table)
+ "serpent.c": Implémente les fonctionnalités liées au serpent (creation du serpent/desallouer le serpent)
+ "liste_section.c" : implemente les fonctions liees au sections et liste-sections(creer la liste des sections du serpent/creer une section/ajouter une section au debut de la liste des sections/ajouter une section a la fin de la liste des sections/extraire une section du debut de la liste des sections/extraire une section du la fin de la liste des sections /desallouer une section/desallouer une liste section ) 
+ "liste_mouvement.c" : implemente  et les fonctions liees a la liste-mouvement (creer la liste de mouvement /ajouter une case au debut du la liste du mouvement/ajouter une case a la fin du la liste du mouvement/extraire une case du debut de la liste du mouvement/extraire une case a la fin de la liste du mouvement/desallouer une case/desallouer une liste du mouvement/changer la direction de la case et ses cordonnees par apport a les cordonnees de la derniere case/verifier_si_on_peut_ajouter_case/ajouter les case d'une section a la liste de mouvement)
+ "grille.c" : implemente  les fonctions liees a la grille (Grille_allouer/Grille_vider/Grille_tirage_frui/Grille_remplir/Grille_desallouer/Grille_redessiner)
+ "Fonctions_Jeu_1_serpent.c": implemete les fonction liees au game (max/verifier_touches/verifier_tete_et_fruit/bouger_serpent/ai/Game)
+ "Case.c": implemente la structure et les fonction liees a la matrice des case(creer_matrice_cases/desallouer_matrice_cases)
+ 
+ Les fichiers header correspondants ("menu.h", "serpent.h", "liste_section.h", "liste_mouvement.h", "grille.h","Fonctions_Jeu_1_serpent.h","Case.h") 
+ définissent les structures de données et les prototypes de fonctions utilisés dans chaque module.
+
+
+4. Les variante:
+   -un fruit boost: un fruit temporel , score*3 lorsque le serpent est en mode boost
+   -mode joueur vs joueur
+   -Mode joueur VS ordinateurs
+   -Mode Ias VS Ias
+
+
+
+5. Conclusion:
+
+En conclusion, le développement du jeu du serpent en langage C a été une expérience enrichissante qui nous a permis d'approfondir nos connaissances en programmation et en développement de jeux. Le code résultant est fonctionnel, bien organisé et prêt à être étendu ou amélioré à l'avenir.
