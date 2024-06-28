@@ -1,3 +1,4 @@
+# Le système d'exploitation utilisé est `Linux`.
 # Outils nécessaires avant compilation :
 - Bibliothèque `ncurses.h` que vous pouvez installer avec la commande suivante (sous linux) : `sudo apt-get install libncurses5-dev libncursesw5-dev`
 
